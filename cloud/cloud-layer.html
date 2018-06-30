@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云盘</title>
+<meta name="renderer" content="webkit" />
+<link rel="stylesheet" href="css/cloud.css" type="text/css" />
+</head>
+<body>
+<!-- 删除层 -->
+<div class="delete">
+  <span></span>
+  <div class="delete-tips">
+    <p>确定要删除这个文件夹吗？</p>
+    已删除的文件可以在回收站找到
+  </div>
+  <div class="delete-btns">
+    <button>确定</button><button class="delete-btns-cancel">取消</button>
+  </div>
+</div>
+<!-- 删除中 -->
+<div class="deleting">正在删除 <span>0</span>/<span>15</span></div>
+<!-- 选择存储位置 -->
+<div class="place">
+  <span class="place-x"></span>
+  <h2>选择存储位置</h2>
+  <div class="place-file">JS基础课程</div>
+  <span class="place-tips">不能移动到这里！</span>
+  <div class="place-tree">
+    <!--<ul class="place-tree-ul"></ul>-->
+  </div>
+  <div class="delete-btns">
+    <button>确定</button><button class="delete-btns-cancel">取消</button>
+  </div>
+</div>
+<div class="main">
+  <div class="main-top ks-clear">
+    <!-- 超时提示 -->
+    <div class="main-top-time">连接服务器超时，请稍后再试</div>
+    <!-- 删除成功提示 -->
+    <!--<div class="main-top-time main-top-success">删除文件成功</div>-->
+    <!-- 选择文件提示 -->
+    <!--<div class="main-top-time main-top-choose">请选择文件</div>-->
+    <div class="main-top-right">
+      <div class="main-top-right-user">
+        <img src="images/cloud_head.png" alt="" />
+      </div>
+      <span></span>
+    </div>
+    <h2>妙味云盘</h2>
+  </div>
+  <div class="ks-clear main-deal">
+  	<div class="main-deal-select">
+  		<ul>
+  			<li>按时间排序</li>
+  			<li class="main-deal-select-letter">按字母排序</li>
+  			<li class="main-deal-select-display">显示缩略图</li>
+  		</ul>
+  		<img src="images/cloud_display.png" alt="" />
+  	</div>
+  	<button class="main-deal-trigger"></button>
+  	<button class="main-deal-down">下载</button><button class="main-deal-down main-deal-share">分享</button><button class="main-deal-down main-deal-move">移动到</button><button class="main-deal-down main-deal-name">重命名</button><button class="main-deal-down main-deal-delete">删除</button><button class="main-deal-down main-deal-new">新建文件夹</button><button class="main-deal-refresh"></button>
+  </div>
+  <div class="main-con">
+  	<!--<ul class="main-tree">
+  		<li class="main-tree-unfold">
+  			<span class="main-tree-level1 main-tree-open main-tree-cur">微云</span>
+  			<ul>
+  				<li class="main-tree-unfold main-tree-unfoldlevel2">
+  					<span class="main-tree-level2 main-tree-open">JS课程</span>
+  					<ul>
+  						<li>
+  							<span>123</span>
+  						</li>
+  						<li class="main-tree-child">
+  							<span>333</span>
+  						</li>
+  						<li class="main-tree-unfold main-tree-unfoldlevel3">
+  							<span class="main-tree-open">CSS课程</span>
+  							<ul>
+  								<li>
+  									<span>CSS课程</span>
+  								</li>
+  								<li>
+  									<span>123</span>
+  								</li>
+  								<li>
+  									<span>JS基础课程</span>
+  								</li>
+  							</ul>
+  						</li>
+  						<li>
+  							<span>111111</span>
+  						</li>
+  					</ul>
+  				</li>
+  			</ul>
+  		</li>
+  	</ul>-->
+  	<div class="main-right">
+	  	<div class="main-right-top">
+        <!-- 全选复选框选中时添加类名 main-right-top-all -->
+	  		<span></span><!--<input type="checkbox" /><a href="javascript:;">微云</a> <img src="images/cloud_arrowpath.png" alt="" /> <a href="javascript:;">JS课程</a> <img src="images/cloud_arrowpath.png" alt="" /> <a href="javascript:;">CSS课程</a>-->
+	  	</div>
+      <!-- 无内容时给下方 div 添加类名 main-right-content-empty -->
+	  	<div class="main-right-content ks-clear">
+        <!-- 无内容 -->
+        <div class="main-right-content-empty-con">
+          <h1>暂无文件</h1>
+          请点击左上角的“上传”按钮添加
+        </div>
+        <!-- 滚动条 -->
+	  		<div class="main-right-content-bar"></div>
+	  		<!--<div class="main-right-content-file">
+          (复选框)
+	  			<input type="checkbox" class="main-right-content-file-check" />
+	  			<span>CSS课程</span>
+          (修改名称的输入框)
+	  			<input value="JS" class="main-right-content-file-txt" />
+	  		</div>
+        （选中后添加类名 main-right-content-filecheck）
+        <div class="main-right-content-file">
+          (模拟复选框：选中后添加类名 main-right-content-file-checked)
+          <div class="main-right-content-file-checkde"></div>
+          <span>CSS课程</span>
+          (修改名称的输入框)
+          <input value="JS" class="main-right-content-file-txt" />
+        </div>
+	  		<div class="main-right-content-file main-right-content-con">
+	  			<input type="checkbox" class="main-right-content-file-check" />
+	  			<span>CSS课程</span>
+	  			<input value="JS" class="main-right-content-file-txt" />
+	  		</div>
+	  		<div class="main-right-content-file main-right-content-img">
+	  			<input type="checkbox" class="main-right-content-file-check" />
+	  			<span>未标题-2</span>
+	  			<input value="JS" class="main-right-content-file-txt" />
+	  		</div>
+	  		<div class="main-right-content-file main-right-content-txt">
+	  			<input type="checkbox" class="main-right-content-file-check" />
+	  			<span>要回复的帖子</span>
+	  			<input value="JS" class="main-right-content-file-txt" />
+	  		</div>
+	  		<div class="main-right-content-file main-right-content-zip">
+	  			<input type="checkbox" class="main-right-content-file-check" />
+	  			<span>8-12</span>
+	  			<input value="JS" class="main-right-content-file-txt" />
+	  		</div>-->
+	  	</div>
+	  </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../jQuery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/cloud-data.js"></script>
+<script type="text/javascript" src="js/cloud-tool.js"></script>
+<script type="text/javascript" src="js/cloud-layer.js"></script>
+</body>
+</html>
